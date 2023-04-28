@@ -2,7 +2,9 @@ import 'zone.js/dist/zone';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { bootstrapApplication } from '@angular/platform-browser';
-import { DataManager } from './data/DataManager';
+import { TransactionDto } from './Dto/TransactionDto';
+// import { DataManager } from './data/DataManager';
+// import { Transaction } from './models/Transaction.model';
 
 @Component({
   selector: 'my-app',
@@ -18,7 +20,7 @@ import { DataManager } from './data/DataManager';
 export class App {
   name = 'Angular';
 
-  dataManager: DataManager<Transaction> = new DataManager();
+  transactions = new TransactionDto();
 }
 
 bootstrapApplication(App);
